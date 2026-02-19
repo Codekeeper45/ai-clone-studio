@@ -310,7 +310,7 @@ const SYSTEM_PROMPT = `РўС‹ вЂ” СЌРєСЃРїРµСЂС‚-Р°РЅ�
    - 5.5вЂ“6.9 вЂ” РЎР›РђР‘Р«Р™
    - <5.5 вЂ” РЈР”РђР›РРўР¬`;
 
-const maybeIt = EVAL_CONFIG.apiKey ? it : it.skip;
+const maybeIt = (EVAL_CONFIG.apiKey && existsSync(DATASET_PATH)) ? it : it.skip;
 
 describe('AI quality audit for Telegram -> ShareGPT preprocessing', () => {
   maybeIt(

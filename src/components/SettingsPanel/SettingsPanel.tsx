@@ -181,6 +181,7 @@ export function SettingsPanel() {
             <p className="card-subtitle">Provider settings for data cleaning and analysis</p>
           </div>
         </div>
+        <form onSubmit={e => { e.preventDefault(); handleSaveAI(); }}>
 
         <div className="settings-section">
           <div className="settings-section-title">Provider</div>
@@ -292,9 +293,10 @@ export function SettingsPanel() {
           <p className="text-sm text-muted mt-8">Messages per API call (10-200)</p>
         </div>
 
-        <button className="btn btn-primary" onClick={handleSaveAI}>
+        <button className="btn btn-primary" type="submit">
           Save AI Settings
         </button>
+        </form>
       </div>
 
       {/* Modal.com Configuration */}
@@ -306,6 +308,7 @@ export function SettingsPanel() {
           </div>
           <Server size={20} style={{ color: 'var(--text-muted)' }} aria-hidden="true" />
         </div>
+        <form onSubmit={e => { e.preventDefault(); handleSaveModal(); }}>
 
         <div className="settings-section">
           <div className="settings-section-title">Token ID</div>
@@ -384,9 +387,10 @@ export function SettingsPanel() {
           </p>
         </div>
 
-        <button className="btn btn-primary" onClick={handleSaveModal}>
+        <button className="btn btn-primary" type="submit">
           Save Modal Settings
         </button>
+        </form>
       </div>
     </div>
   );
