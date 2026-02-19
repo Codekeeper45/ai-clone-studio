@@ -1,0 +1,37 @@
+{
+  "createdAt": "2026-02-18T11:59:55.974Z",
+  "datasetPath": "../../../Downloads/чаты/result.json",
+  "viewport": "mobile",
+  "screenshots": [
+    {
+      "step": "import-empty",
+      "viewport": "mobile",
+      "path": "reports/ui-screenshots/2026-02-18/import-empty-mobile.png",
+      "timestamp": "2026-02-18T11:59:44.334Z"
+    },
+    {
+      "step": "import-loaded",
+      "viewport": "mobile",
+      "path": "reports/ui-screenshots/2026-02-18/import-loaded-mobile.png",
+      "timestamp": "2026-02-18T11:59:44.709Z"
+    },
+    {
+      "step": "process",
+      "viewport": "mobile",
+      "path": "reports/ui-screenshots/2026-02-18/process-mobile.png",
+      "timestamp": "2026-02-18T11:59:54.074Z"
+    },
+    {
+      "step": "clean",
+      "viewport": "mobile",
+      "path": "reports/ui-screenshots/2026-02-18/clean-mobile.png",
+      "timestamp": "2026-02-18T11:59:55.096Z"
+    },
+    {
+      "step": "export",
+      "viewport": "mobile",
+      "path": "reports/ui-screenshots/2026-02-18/export-mobile.png",
+      "timestamp": "2026-02-18T11:59:55.974Z"
+    }
+  ]
+}

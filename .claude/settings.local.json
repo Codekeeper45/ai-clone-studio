@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create vite@latest:*)",
+      "Bash(npx:*)",
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(npm run build)",
+      "Bash(git init)",
+      "Bash(git add:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.unsloth.ai)",
+      "WebFetch(domain:unsloth.ai)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npm audit)",
+      "WebFetch(domain:modal.com)",
+      "Bash(git clone:*)",
+      "Bash(test:*)",
+      "Bash(npm test)",
+      "Bash(npm test:*)",
+      "Bash(npm run lint)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "github-mcp-server",
+    "supabase-mcp-server",
+    "gcp",
+    "n8n-builder",
+    "google-sheets",
+    "n8n-mcp",
+    "n8n-builder2"
+  ],
+  "enableAllProjectMcpServers": true
+}

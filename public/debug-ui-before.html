@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Debug Before</title>
+  <link rel="stylesheet" href="/src/index.css" />
+  <style>
+    body { margin: 0; }
+    .debug-wrap { padding: 24px; display: grid; grid-template-columns: 1fr 420px; gap: 24px; }
+    .mock-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+    .target-user-selector .participants-grid { margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <div class="debug-wrap">
+    <div class="mock-card target-user-selector">
+      <div class="page-header">
+        <h2 class="page-title">Select Target User</h2>
+        <p class="page-subtitle">Choose the person whose communication style you want to clone</p>
+      </div>
+      <div class="participants-grid" id="participants"></div>
+    </div>
+
+    <div class="mock-card filter-configuration">
+      <h3 class="card-title">Filter Configuration</h3>
+
+      <div class="form-group">
+        <label class="form-label">Merge Burst Messages</label>
+        <button class="toggle active" aria-pressed="true">
+          <span class="toggle-switch"></span>
+        </button>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Filter Lazy Responses</label>
+        <button class="toggle" aria-pressed="false">
+          <span class="toggle-switch"></span>
+        </button>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Enable Identity Guard</label>
+        <button class="toggle active" aria-pressed="true">
+          <span class="toggle-switch"></span>
+        </button>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Lazy Patterns (comma-separated)</label>
+        <textarea class="form-input" rows="4">ok, lol, yes, no, k, kk, да, нет, ага, угу, хз, ну, yep, nope, haha, xd, 👍, 😂</textarea>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const p = document.getElementById('participants');
+    const names = Array.from({ length: 120 }, (_, i) => `User_${String(i + 1).padStart(3, '0')}`);
+    names.forEach((name, idx) => {
+      const btn = document.createElement('button');
+      btn.className = `participant-chip ${idx === 2 ? 'selected' : ''}`;
+      btn.innerHTML = `<div class="participant-name">${name}</div><div class="participant-count">${Math.floor(Math.random() * 3000)} messages</div>`;
+      p.appendChild(btn);
+    });
+  </script>
+</body>
+</html>

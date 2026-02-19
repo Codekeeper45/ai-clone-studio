@@ -1,0 +1,68 @@
+{
+  "name": "Entities and Mixed Types",
+  "type": "personal_chat",
+  "messages": [
+    {
+      "id": 1,
+      "type": "message",
+      "date": "2024-01-11T09:00:00+03:00",
+      "from": "Bob",
+      "text": [
+        { "type": "plain", "text": "Доброе " },
+        { "type": "bold", "text": "утро" },
+        { "type": "plain", "text": "!" }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "message",
+      "date": "2024-01-11T09:01:00+03:00",
+      "from": "Alice",
+      "text": "Привет, готова к созвону?"
+    },
+    {
+      "id": 3,
+      "type": "message",
+      "date": "2024-01-11T09:02:00+03:00",
+      "from": "Alice",
+      "text": "Скину заметки после встречи."
+    },
+    {
+      "id": 4,
+      "type": "service",
+      "date": "2024-01-11T09:03:00+03:00",
+      "from": "System",
+      "text": ""
+    },
+    {
+      "id": 5,
+      "type": "message",
+      "date": "2024-01-11T09:04:00+03:00",
+      "from": "Bob",
+      "text": "Да, через 10 минут."
+    },
+    {
+      "id": 6,
+      "type": "message",
+      "date": "2024-01-11T09:05:00+03:00",
+      "from": "Alice",
+      "text": "Ок, подключусь вовремя."
+    },
+    {
+      "id": 7,
+      "type": "message",
+      "date": "2024-01-11T09:20:00+03:00",
+      "from": "Bob",
+      "photo": "photo_001.jpg",
+      "media_type": "photo",
+      "text": ""
+    },
+    {
+      "id": 8,
+      "type": "message",
+      "date": "2024-01-11T09:21:00+03:00",
+      "from": "Alice",
+      "text": "Фото получил, спасибо."
+    }
+  ]
+}
