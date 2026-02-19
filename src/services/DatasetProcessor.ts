@@ -175,18 +175,17 @@ export class DatasetProcessor {
   }
 
   /**
-   * Removes messages not from the target user (case-insensitive)
+   * Identity Guard - ensures the dataset is suitable for cloning the target user.
+   * In a conversation context, we keep messages from other users as they provide
+   * necessary context (the 'human' role in ShareGPT), but we could use this 
+   * step to perform other identity-related validations.
    */
   validateIdentity(): void {
-    const beforeCount = this.processedMessages.length;
-    const targetUserLower = this.targetUser.toLowerCase();
-
-    this.processedMessages = this.processedMessages.filter(
-      (msg) => msg.sender.toLowerCase() === targetUserLower
-    );
-
-    const excludedCount = beforeCount - this.processedMessages.length;
-    this.stats.identityExcluded = excludedCount;
+    // We no longer filter out non-target users here, because they are needed
+    // for conversation context in chat fine-tuning (ShareGPT format).
+    // The ShareGPTExporter will ensure that only conversations containing 
+    // the target user are exported.
+    this.stats.identityExcluded = 0;
   }
 
   /**
